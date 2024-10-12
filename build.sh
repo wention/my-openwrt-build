@@ -7,8 +7,11 @@ time_start=$(date +"%s")
 
 set -x
 
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+make defconfig
 
 make -j8 download || make download V=s
 
