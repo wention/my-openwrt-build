@@ -15,7 +15,7 @@ sudo qemu-system-x86_64 \
   -no-user-config \
   -nodefaults \
   -nographic \
-  -serial stdio \
+  -serial mon:stdio \
   -device virtio-net-pci,netdev=n1 \
   -netdev tap,id=n1,helper=/usr/lib/qemu/qemu-bridge-helper \
   -drive file=$BASEDIR/images/openwrt.qcow2
